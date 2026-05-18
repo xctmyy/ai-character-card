@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Vue-3.5+-green.svg" alt="Vue 3.5+">
   <img src="https://img.shields.io/badge/TypeScript-5.6+-blue.svg" alt="TypeScript 5.6+">
   <img src="https://img.shields.io/badge/Vite-6.0+-purple.svg" alt="Vite 6.0+">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
+  <img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="AGPL v3">
 </p>
 
 <p align="center">
@@ -113,7 +113,13 @@ npm run lint
 
 ## License | 许可证
 
-MIT License
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+本项目采用 GNU Affero 通用公共许可证 v3.0 (AGPL-3.0) 授权。
+
+See [LICENSE](LICENSE) file for details.
+
+详见 [LICENSE](LICENSE) 文件。
 
 ---
 
