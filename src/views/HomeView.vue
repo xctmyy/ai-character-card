@@ -942,7 +942,7 @@ function closeModal() {
 
     <!-- 页脚 -->
     <footer class="footer">
-      <p>Powered by AI 每次测评都会生成独特的题目</p>
+      <p>Made by _tmyy with VibeCoding | AI驱动的心理测评与角色生成</p>
     </footer>
   </div>
 </template>
