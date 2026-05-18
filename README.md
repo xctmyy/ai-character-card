@@ -123,6 +123,12 @@ See [LICENSE](LICENSE) file for details.
 
 ---
 
+## Author | 作者
+
+**_tmyy with VibeCoding**
+
+---
+
 <p align="center">
   Made with love for AI roleplay enthusiasts
 </p>
