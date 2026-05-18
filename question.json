@@ -1,0 +1,65 @@
+{
+  "blueprint_name": "多维人物卡生成命题蓝图",
+  "version": "2.0",
+  "description": "该文件定义了一套生成30道选择题、5道问答题、5道对话题的完整规格。AI应依据每道题的'measurement_targets'设计情境和选项，确保全面覆盖大五人格、荣格八维、九型人格、道德阵营、DISC行为风格等维度。",
+  "sections": {
+    "multiple_choice": {
+      "count": 30,
+      "instruction": "每道题需提供一个虚构但通用的情境，并提供4个选项。选项必须隐含不同维度的典型反应，确保能够区分被测者的倾向。所有题目需混合呈现，避免同类题目连续出现。",
+      "items": [
+        { "id": "MC01", "measurement_targets": ["大五-开放性", "认知功能-Ne(外向直觉)", "九型-本能反应(7号倾向)"], "scenario_hint": "面对未知、新奇或冒险邀请时的第一反应" },
+        { "id": "MC02", "measurement_targets": ["大五-外向性", "认知功能-Se(外向感觉) vs Si(内向感觉)", "DISC-I型倾向"], "scenario_hint": "在社交场合（如酒馆、聚会）中的能量流向与舒适区" },
+        { "id": "MC03", "measurement_targets": ["大五-尽责性", "MBTI-J/P偏好"], "scenario_hint": "完成任务的方式：计划性与条理性 vs 灵活与随性" },
+        { "id": "MC04", "measurement_targets": ["大五-宜人性", "九型-压力反应(9号/8号)", "冲突处理风格"], "scenario_hint": "面对队友失误或犯错时的直接反应" },
+        { "id": "MC05", "measurement_targets": ["大五-神经质", "九型-核心恐惧(4号/6号)", "依附模式"], "scenario_hint": "遭遇背叛或重大情感打击后的持续情绪状态" },
+        { "id": "MC06", "measurement_targets": ["认知功能-Ne vs Ni(直觉方向)", "认知功能-Se vs Si(感觉方向)", "大五-开放性(细分)"], "scenario_hint": "破解谜题、理解抽象符号或学习新知识时的思维过程" },
+        { "id": "MC07", "measurement_targets": ["MBTI-E/I偏好(能量来源)", "认知功能-Te vs Ti(外倾思考 vs 内倾思考)"], "scenario_hint": "制定计划或复杂决策时，倾向于讨论还是独自思考" },
+        { "id": "MC08", "measurement_targets": ["认知功能-Te/Fi vs Fe/Ti(决策功能)", "大五-宜人性 vs 道德倾向"], "scenario_hint": "当群体规则与个人逻辑/价值观冲突时的反应" },
+        { "id": "MC09", "measurement_targets": ["认知功能-Fi(内倾情感) vs Te(外倾思考)", "九型-核心渴望(3号/4号/2号)"], "scenario_hint": "自我评价的核心标准：内在价值 vs 外部成效 vs 关系认可" },
+        { "id": "MC10", "measurement_targets": ["认知功能-Ne/Ni与Se/Si的组合", "DISC-C(谨慎) vs D(支配)", "技能倾向"], "scenario_hint": "学习新技艺（如锻造、魔法）时的偏好：理论、实践、传统或创新" },
+        { "id": "MC11", "measurement_targets": ["九型人格-核心恐惧"], "scenario_hint": "直接询问内心深处最想摆脱的情绪牢笼，选项对应1-9号恐惧" },
+        { "id": "MC12", "measurement_targets": ["九型人格-压力解离方向", "大五-神经质表现细分"], "scenario_hint": "在巨大压力下的典型不良应对模式" },
+        { "id": "MC13", "measurement_targets": ["九型人格-本能副型(自保/一对一/社交)"], "scenario_hint": "精力与注意力的主要投放领域：生存安全、亲密关系或群体归属" },
+        { "id": "MC14", "measurement_targets": ["道德阵营(守序-混乱/善良-邪恶)", "DISC-D vs S", "九型-社会本能反应"], "scenario_hint": "面对一个道德灰色地带（如为养家而犯罪的人）的处置态度" },
+        { "id": "MC15", "measurement_targets": ["道德阵营(善良-邪恶轴)", "大五-开放性", "九型-核心欲望(8号/5号)"], "scenario_hint": "对待具有腐蚀性但能增强力量的事物的态度" },
+        { "id": "MC16", "measurement_targets": ["DISC行为风格(D/I/S/C)", "团队角色偏好"], "scenario_hint": "在团队中自然承担的角色：领袖、鼓舞者、执行者或军师" },
+        { "id": "MC17", "measurement_targets": ["DISC-主导功能(D/I/S/C)", "社交技能", "道德阵营-守序倾向"], "scenario_hint": "说服持不同意见的权威人物时的策略" },
+        { "id": "MC18", "measurement_targets": ["MBTI-E/I偏好(确认)", "九型-本能副型", "大五-外向性"], "scenario_hint": "休息日恢复精力的典型方式" },
+        { "id": "MC19", "measurement_targets": ["大五-宜人性(逆)", "认知功能-Ti强度", "九型-6号/8号特质"], "scenario_hint": "发现自己的观点与权威相左时的反应" },
+        { "id": "MC20", "measurement_targets": ["世界观底层信念", "九型-核心信念", "大五-开放性"], "scenario_hint": "对“命运”与“自由意志”的内在信念" },
+        { "id": "MC21", "measurement_targets": ["道德阵营-善良 vs 功利", "DISC-S vs C", "九型-本能副型(一对一)"], "scenario_hint": "队友危险时的抉择：保护、计算、完成任务或放弃" },
+        { "id": "MC22", "measurement_targets": ["道德阵营-守序/混乱轴", "大五-尽责性(细分)", "九型-8号倾向"], "scenario_hint": "对“规则”的根本看法" },
+        { "id": "MC23", "measurement_targets": ["核心动机", "九型-核心欲望", "力量倾向"], "scenario_hint": "对“力量”价值与用途的理解" },
+        { "id": "MC24", "measurement_targets": ["大五-开放性(直接表现)", "认知功能-Ne vs Si", "九型-5号/6号倾向"], "scenario_hint": "遭遇完全未知、无法理解的存在时的初始情绪" },
+        { "id": "MC25", "measurement_targets": ["认知功能-Te vs Fi/Fe", "大五-尽责性", "九型-1号/3号/9号倾向"], "scenario_hint": "任务失败后的复盘风格" },
+        { "id": "MC26", "measurement_targets": ["隐藏渴望", "九型-欲望(5/2/3/6)", "技能偏好"], "scenario_hint": "如果可以拥有一项超常天赋，会选择什么" },
+        { "id": "MC27", "measurement_targets": ["认知功能-Fe vs Ti", "DISC-I vs C", "冲突风格"], "scenario_hint": "在激烈争论中，对手使用情感绑架时的反应" },
+        { "id": "MC28", "measurement_targets": ["九型-核心欲望(整合)", "大五-尽责性/开放性", "长期技能树方向"], "scenario_hint": "长期人生目标的本质概括" },
+        { "id": "MC29", "measurement_targets": ["大五-开放性", "认知功能-Si强度", "道德阵营-守序"], "scenario_hint": "对待传统与习俗的态度" },
+        { "id": "MC30", "measurement_targets": ["理想化自我投射", "九型-整合方向", "DISC理想型"], "scenario_hint": "最欣赏的领导者类型" }
+      ]
+    },
+    "short_answer": {
+      "count": 5,
+      "instruction": "每道题应为一个开放性叙事问题，要求被测者描述具体经历、感受或想象。AI需通过语义分析提取情感、动机和价值观。题目应触及核心冲突、隐藏渴望和内心世界。",
+      "items": [
+        { "id": "SA01", "measurement_targets": ["九型-核心恐惧与压力反应", "依附模式", "宽恕/报复倾向", "情感基调(神经质)"], "theme": "描述一次被深深背叛的经历，包括内心活动与后续行为" },
+        { "id": "SA02", "measurement_targets": ["大五-尽责性/外向性真实性检验", "九型-本能副型", "兴趣与技能标签", "能量模式"], "theme": "描绘一个完全自由支配的休息日，从早到晚的三个片段" },
+        { "id": "SA03", "measurement_targets": ["隐藏欲望与核心动机", "九型-核心渴望", "道德边界", "想象力与开放性"], "theme": "如果拥有一项违反物理法则的能力，选择什么，并首次使用的情境" },
+        { "id": "SA04", "measurement_targets": ["抗压与韧性", "九型-解离方向", "命运观", "性格阴影面"], "theme": "回忆人生中最接近死亡或彻底失败的经历，如何与绝望共处" },
+        { "id": "SA05", "measurement_targets": ["情感功能深度(Fe/Fi)", "九型-2号/4号倾向", "利他与牺牲观", "人物弧光潜力"], "theme": "如何看待“爱”与“牺牲”，结合最重要的一段情感羁绊来谈" }
+      ]
+    },
+    "dialogue": {
+      "count": 5,
+      "instruction": "每道题需设定一个具体的对话场景和一句NPC的开场白，要求被测者以角色的身份写出内心活动和实际回应。场景必须制造关系张力或道德困境。",
+      "items": [
+        { "id": "DG01", "measurement_targets": ["对批评/预言的即时反应", "认知功能-Fe/Fi/Ti", "核心恐惧激发", "冲突风格"], "scenario_type": "陌生人给出关于角色阴影的警告或预言" },
+        { "id": "DG02", "measurement_targets": ["DISC冲突表现(D/I/S/C)", "宜人性与情绪稳定性", "团队角色认知", "辩解/自省倾向"], "scenario_type": "被队友公开指责自私或不顾团队，但角色自认为并非如此" },
+        { "id": "DG03", "measurement_targets": ["道德困境抉择", "九型-核心欲望", "价值权重(记忆vs重要他人)", "决策逻辑(Te/Ti vs Fi)"], "scenario_type": "与一个全能的商人谈判，以珍贵的个人记忆换取复活至亲的机会" },
+        { "id": "DG04", "measurement_targets": ["荣誉感与忠诚度", "社交策略(DISC-I/C)", "道德阵营表现", "维护群体和谐/规则的方式"], "scenario_type": "在正式社交场合中，导师或敬重之人当众受辱" },
+        { "id": "DG05", "measurement_targets": ["信任与宽恕", "九型-疑虑与掌控(6号/8号)", "道德阵营实际选择", "关系处理风格"], "scenario_type": "发现离队旧友正在偷窃队伍的物资，对方苦笑并表示别无选择" }
+      ]
+    }
+  }
+}
