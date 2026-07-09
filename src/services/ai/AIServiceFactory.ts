@@ -1,6 +1,6 @@
-import type { AIConfig, AIProvider, IAIService } from '@/types/ai';
-import { OpenAIService } from './OpenAIService';
-import { OllamaService } from './OllamaService';
+import type { AIConfig, AIProvider, IAIService } from '@/types/ai'
+import { OpenAIService } from './OpenAIService'
+import { OllamaService } from './OllamaService'
 
 // AI服务工厂
 export class AIServiceFactory {
@@ -8,11 +8,11 @@ export class AIServiceFactory {
   static createService(config: AIConfig): IAIService {
     switch (config.provider) {
       case 'openai':
-        return new OpenAIService(config);
+        return new OpenAIService(config)
       case 'ollama':
-        return new OllamaService(config);
+        return new OllamaService(config)
       default:
-        throw new Error(`不支持的AI提供商: ${config.provider}`);
+        throw new Error(`不支持的AI提供商: ${config.provider}`)
     }
   }
 
@@ -27,7 +27,7 @@ export class AIServiceFactory {
             apiKey: '',
             model: 'gpt-3.5-turbo',
           },
-        };
+        }
       case 'ollama':
         return {
           provider: 'ollama',
@@ -35,9 +35,9 @@ export class AIServiceFactory {
             baseUrl: 'http://localhost:11434',
             model: '',
           },
-        };
+        }
       default:
-        throw new Error(`不支持的AI提供商: ${provider}`);
+        throw new Error(`不支持的AI提供商: ${provider}`)
     }
   }
 
@@ -46,6 +46,6 @@ export class AIServiceFactory {
     return [
       { value: 'openai', label: 'OpenAI格式API' },
       { value: 'ollama', label: 'Ollama本地模型' },
-    ];
+    ]
   }
 }

@@ -1,53 +1,59 @@
 <script setup lang="ts">
-import { ref, watch, computed } from 'vue';
-import type { DialogueQuestion as DGQuestion } from '@/types/question';
+import { ref, watch, computed } from 'vue'
+import type { DialogueQuestion as DGQuestion } from '@/types/question'
 
 const props = defineProps<{
-  question: DGQuestion;
-  innerThought: string;
-  response: string;
-  questionNumber: number;
-  totalQuestions: number;
-}>();
+  question: DGQuestion
+  innerThought: string
+  response: string
+  questionNumber: number
+  totalQuestions: number
+}>()
 
 const emit = defineEmits<{
-  (e: 'update:innerThought', value: string): void;
-  (e: 'update:response', value: string): void;
-}>();
+  (e: 'update:innerThought', value: string): void
+  (e: 'update:response', value: string): void
+}>()
 
-const localInnerThought = ref(props.innerThought);
-const localResponse = ref(props.response);
+const localInnerThought = ref(props.innerThought)
+const localResponse = ref(props.response)
 
 // 同步外部变化
-watch(() => props.innerThought, (newVal) => {
-  localInnerThought.value = newVal;
-});
+watch(
+  () => props.innerThought,
+  (newVal) => {
+    localInnerThought.value = newVal
+  },
+)
 
-watch(() => props.response, (newVal) => {
-  localResponse.value = newVal;
-});
+watch(
+  () => props.response,
+  (newVal) => {
+    localResponse.value = newVal
+  },
+)
 
 // 防抖更新
-let timeout1: ReturnType<typeof setTimeout>;
-let timeout2: ReturnType<typeof setTimeout>;
+let timeout1: ReturnType<typeof setTimeout>
+let timeout2: ReturnType<typeof setTimeout>
 
 function onInnerThoughtInput() {
-  clearTimeout(timeout1);
+  clearTimeout(timeout1)
   timeout1 = setTimeout(() => {
-    emit('update:innerThought', localInnerThought.value);
-  }, 300);
+    emit('update:innerThought', localInnerThought.value)
+  }, 300)
 }
 
 function onResponseInput() {
-  clearTimeout(timeout2);
+  clearTimeout(timeout2)
   timeout2 = setTimeout(() => {
-    emit('update:response', localResponse.value);
-  }, 300);
+    emit('update:response', localResponse.value)
+  }, 300)
 }
 
 const progressPercent = computed(() => {
-  return Math.round((props.questionNumber / props.totalQuestions) * 100);
-});
+  return Math.round((props.questionNumber / props.totalQuestions) * 100)
+})
 </script>
 
 <template>
@@ -80,11 +86,7 @@ const progressPercent = computed(() => {
 
     <!-- 测量目标 -->
     <div class="measurement-tags">
-      <span
-        v-for="target in question.measurementTargets"
-        :key="target"
-        class="tag"
-      >
+      <span v-for="target in question.measurementTargets" :key="target" class="tag">
         {{ target }}
       </span>
     </div>
